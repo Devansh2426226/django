@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+    'blog',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,10 +52,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'django_env.urls'
 
+# C:\Users\AE\Documents\projects\django\my_website\django_env\manage.py
+# C:\Users\AE\Documents\projects\django\my_website\django_env\django_env\templates
+
+TEMPLATES_DIR = BASE_DIR/'django_env'/'templates'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_env.wsgi.application'
+
 
 
 # Database
