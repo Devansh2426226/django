@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include # python manage.py runserver
 from .views import index
 from .views import home
-from .views import index
+
 
 urlpatterns = [
     path('blog/', include('blog.urls')),
